@@ -1,38 +1,184 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+  background: url("img/finance.jpg") no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4em;
+}
+
+.wrapper {
+  height: 55vh;
+  background: linear-gradient(to right, #daf7ef, #b9edde);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+
+.text-components {
+  margin-left: 50px;
+  max-width: 375px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rates {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.converter {
+  margin-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.converter-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.converter-currency {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3px;
+  height: 27px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.converter-currency label {
+  max-width: 140px;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+}
+
+.converter select {
+  margin: 0 5px;
+}
+
+.chart-component {
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 500px;
+}
+
+.chart-settings {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.period {
+  margin-left: 5px;
+}
+
+.chart {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+h3 {
+  text-align: center;
+}
+
+button, select {
+  max-width: 250px;
+  font-size: 0.8em;
+  border: 1px solid #00bfff;
+  border-radius: 5px;
+  background: #a3e3d1;
+  box-sizing: border-box;
+}
+
+button {
+  margin: 0;
+  padding-top: 3px;
+}
+
+input {
+  text-align: right;
+  width: 100px;
+  font-size: 0.8em;
+  background:#daf7ef;
+  border-color: #00bfff;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1.2em;
   }
-  to {
-    transform: rotate(360deg);
+
+  .wrapper {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .converter {
+    margin-top: 30px;
+  }
+
+  .converter-body {
+    padding-right: 30px;
+  }
+
+  .converter-currency {
+    height: 21px;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  .text-components {
+    margin: 5px;
+    font-size: 0.9em;
+  }
+
+  button, select {
+    font-size: 0.7em;
+    height: 21px  ;
+  }
+
+  input {
+    font-size: 0.7em;
+    height: 17px;
+  }
+
+  .chart-component {
+    margin: 20px 5px;
+    width: 350px;
+  }
+
+  .chart {
+    height: 200px;
+  }
+
+  .chart-settings {
+    height: 21px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1025px) {
+  .wrapper {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .chart-component {
+    margin: 20px;
+    width: 450px;
+  }
+
+  .chart {
+    height: 250px;
   }
 }

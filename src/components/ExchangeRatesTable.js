@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import "../App.css"
 
 export default function ExchangeRatesTable({response}) {
   const [mainCurrencies, setMainCurrencies] = useState([])
@@ -70,7 +69,7 @@ export default function ExchangeRatesTable({response}) {
                 <option key={currency.txt} value={currency.txt}>{currency.txt}</option>
               ))}
             </select> </td>
-            <td> {selectedCurrencyRate} </td>
+            <td className="rates"> {selectedCurrencyRate} </td>
           </tr>
         </tbody>
       </table>

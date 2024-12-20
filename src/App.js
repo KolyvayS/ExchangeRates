@@ -2,7 +2,7 @@ import React from "react";
 import ExchangeRatesTable from "./components/ExchangeRatesTable";
 import ExchangeRateChart from "./components/ExchangeRateChart";
 import CurrencyConverter from "./components/CurrencyConverter";
-import "./App.css";
+import "./App.scss";
 import axios from 'axios';
 
 const getCurrentDateForAPI = () => {
